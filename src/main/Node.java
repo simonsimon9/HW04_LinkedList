@@ -47,6 +47,7 @@ public class Node<T> {
 		this.next = next;
 	}
 	
+
 	public String toString() {
 		int returnNext = System.identityHashCode(next);
 		int returnPrev = System.identityHashCode(prev);
