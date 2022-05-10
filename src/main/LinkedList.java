@@ -158,6 +158,7 @@ public class LinkedList<T> implements List<T>, Iterable<T> {
 					prevNode.setNext(nextNode);
 					nextNode.setPrev(prevNode);
 					size--;
+					point = point.getNext();
 				}
 				
 			}
@@ -395,7 +396,7 @@ public class LinkedList<T> implements List<T>, Iterable<T> {
 	}
 	
 	public static void main(String[] args) {
-		LinkedList<String> newList = new LinkedList<>(); 
+		LinkedList<String> newList = new LinkedList<String>(); 
 		
 		newList.add("hey");
 		newList.add("no");
@@ -405,6 +406,12 @@ public class LinkedList<T> implements List<T>, Iterable<T> {
 		
 		newList.run();
 		
+		Iterator<String> iter = newList.iterator();
+		
+		iter.next();
+		iter.remove();
+		iter.remove();
+		newList.run();
 		
 	}
 	
